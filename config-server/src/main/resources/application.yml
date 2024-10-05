@@ -9,7 +9,7 @@ spring:
       server:
         git:
           uri: https://github.com/fransasdsa/version100.git  # URL del repositorio Git que contiene las configuraciones
-          search-paths: config-repo
+          search-paths: config-repo  # Ruta donde se buscarán los archivos de configuración
           default-label: main  # Rama predeterminada de Git donde se ubican las configuraciones
 
 management:
