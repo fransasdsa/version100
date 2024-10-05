@@ -1,31 +1,6 @@
-# Archivo: application.yml para Config Server
-
 server:
   port: 8888
 
 spring:
   application:
     name: config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/fransasdsa/version100.git
-          # Repositorio remoto donde están almacenados los archivos de configuración
-          default-label: main # Rama por defecto
-    profiles:
-      active: git
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  health:
-    enabled: true
-    reactive:
-      enabled: true
-
-logging:
-  level:
-    root: INFO

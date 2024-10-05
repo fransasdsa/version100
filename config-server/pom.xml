@@ -1,14 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.2</version> <!-- Actualizado a la última versión estable -->
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
 
     <groupId>com.proyecto</groupId>
     <artifactId>config-server</artifactId>
@@ -20,6 +12,7 @@
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2022.0.3</spring-cloud.version>
+        <spring-boot.version>3.1.2</spring-boot.version> <!-- Añadir la versión de Spring Boot -->
     </properties>
 
     <dependencies>
@@ -27,18 +20,21 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
+            <version>4.0.3</version> <!-- Definir la versión explícita -->
         </dependency>
 
         <!-- Spring Boot Actuator para la monitorización -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${spring-boot.version}</version> <!-- Usar la propiedad de Spring Boot -->
         </dependency>
 
-        <!-- Webflux para un sistema reactivo -->
+        <!-- WebFlux para un sistema reactivo -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
+            <version>${spring-boot.version}</version> <!-- Usar la propiedad de Spring Boot -->
         </dependency>
 
         <!-- Dependencia para pruebas -->
@@ -46,6 +42,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <version>${spring-boot.version}</version> <!-- Usar la propiedad de Spring Boot -->
         </dependency>
     </dependencies>
 
@@ -61,19 +58,12 @@
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
-        <!-- Repositorio Maven Central -->
-        <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-    </repositories>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version> <!-- Definir versión del plugin -->
             </plugin>
         </plugins>
     </build>

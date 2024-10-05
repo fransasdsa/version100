@@ -1,13 +1,13 @@
-package com.proyecto.msstudentservice;
+package com.proyecto.msgateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MsStudentServiceApplication {
+public class MsGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MsStudentServiceApplication.class, args);
+        SpringApplication.run(MsGatewayApplication.class, args);
     }
 
 }

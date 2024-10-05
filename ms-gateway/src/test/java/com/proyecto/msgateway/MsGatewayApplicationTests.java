@@ -1,10 +1,10 @@
-package com.proyecto.msuserservice;
+package com.proyecto.msgateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsUserServiceApplicationTests {
+class MsGatewayApplicationTests {
 
     @Test
     void contextLoads() {
