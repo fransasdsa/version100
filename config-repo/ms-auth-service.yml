@@ -3,23 +3,23 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/authdb  # Asegúrate que 'authdb' exista en PostgreSQL
+    url: jdbc:postgresql://localhost:5432/authdb  # Base de datos específica para este microservicio
     username: postgres
     password: 123456
-    driver-class-name: org.postgresql.Driver  # Asegura que tengas este driver en tu classpath
+    driver-class-name: org.postgresql.Driver  # Driver para PostgreSQL
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true  # Para mostrar las consultas SQL ejecutadas (opcional)
+    show-sql: true  # Mostrar las consultas SQL ejecutadas
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect  # Dialecto para PostgreSQL
+        dialect: org.hibernate.dialect.PostgreSQLDialect  # Dialecto específico para PostgreSQL
 
   cloud:
     config:
-      uri: http://localhost:8888  # URL del Config Server
+      uri: http://localhost:8888  # Dirección del Config Server
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/  # URL de Eureka Server
+      defaultZone: http://localhost:8761/eureka/  # Dirección del Eureka Server
