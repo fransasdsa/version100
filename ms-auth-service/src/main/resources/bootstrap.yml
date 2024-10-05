@@ -5,6 +5,8 @@ spring:
     config:
       uri: http://localhost:8888  # URL del Config Server
       fail-fast: true  # Indica que falle rápidamente si no se puede conectar al Config Server
+  config:
+    import: configserver:http://localhost:8888  # Importar la configuración desde el Config Server
 
 eureka:
   client:
