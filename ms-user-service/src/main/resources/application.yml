@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ms-user-service
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/msuserservice
+    username: postgres
+    password: 123456
+
+  cloud:
+    config:
+      import: "optional:configserver:http://localhost:8888"
+
+logging:
+  level:
+    root: INFO
+    org.springframework.r2dbc: DEBUG
+
+
