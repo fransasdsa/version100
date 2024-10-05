@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      name: config-server
+      server:
+        git:
+          uri: https://github.com/fransasdsa/version100.git
+          default-label: main
+  application:
+    name: config-server
