@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/ms-student-service/pom.xml" />
         <option value="$PROJECT_DIR$/ms-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/Config Server/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-auth-service/pom.xml" />
       </list>
     </option>
   </component>

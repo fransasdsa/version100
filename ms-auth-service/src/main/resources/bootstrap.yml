@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ms-auth-service  # Nombre del microservicio, debe coincidir con el nombre del archivo en config-repo
+  cloud:
+    config:
+      uri: http://localhost:8888  # URL del Config Server
+      fail-fast: true  # Indica que falle rápidamente si no se puede conectar al Config Server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Dirección de Eureka (si se usa para el registro de servicios)
