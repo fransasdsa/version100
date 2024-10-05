@@ -1,1 +1,20 @@
-spring.application.name=config-server
+server:
+  port: 8888  # Puerto en el que correrá el Config Server
+
+spring:
+  application:
+    name: ms-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/fransasdsa/version100.git  # URL del repositorio Git que contiene las configuraciones
+          default-label: main  # Rama predeterminada de Git donde se ubican las configuraciones
+  profiles:
+    active: native  # Modo para desarrollo local si quieres usar la carpeta local en vez de Git
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Exponer todos los endpoints de administración para monitoreo

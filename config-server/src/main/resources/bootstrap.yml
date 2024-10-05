@@ -1,17 +1,5 @@
 spring:
-  application:
-    name: config-server
   cloud:
     config:
-      server:
-        git:
-          uri: https://github.com/fransasdsa/version100.git # URI del repositorio remoto donde están almacenadas las configuraciones
-          default-label: main # Rama por defecto
-server:
-  port: 8888
+      import: optional:configserver:http://localhost:8888
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"

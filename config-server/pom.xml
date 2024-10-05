@@ -2,47 +2,52 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.proyecto</groupId>
-    <artifactId>config-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>config-server</name>
-    <description>Config Server para el sistema de gestión de grados</description>
+    <groupId>com.tuempresa</groupId>
+    <artifactId>ms-config-server</artifactId>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
+
+    <name>ms-config-server</name>
+    <description>Microservicio de Configuración Centralizada</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.0</version> <!-- Ajustar la versión si es necesario -->
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <properties>
         <java.version>17</java.version>
-        <spring-cloud.version>2022.0.3</spring-cloud.version>
-        <spring-boot.version>3.1.2</spring-boot.version> <!-- Añadir la versión de Spring Boot -->
+        <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <spring-boot.version>3.0.7</spring-boot.version>
+        <!-- Spring Cloud versión adecuada -->
     </properties>
 
     <dependencies>
-        <!-- Dependencia para Spring Cloud Config Server -->
+        <!-- Spring Boot Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- Spring Cloud Config Server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
-            <version>4.0.3</version> <!-- Definir la versión explícita -->
         </dependency>
 
-        <!-- Spring Boot Actuator para la monitorización -->
+        <!-- Actuator para monitoreo -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>${spring-boot.version}</version> <!-- Usar la propiedad de Spring Boot -->
         </dependency>
 
-        <!-- WebFlux para un sistema reactivo -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-            <version>${spring-boot.version}</version> <!-- Usar la propiedad de Spring Boot -->
-        </dependency>
-
-        <!-- Dependencia para pruebas -->
+        <!-- Spring Boot Test (opcional, para pruebas) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <version>${spring-boot.version}</version> <!-- Usar la propiedad de Spring Boot -->
         </dependency>
     </dependencies>
 
@@ -63,8 +68,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version> <!-- Definir la versión del plugin -->
             </plugin>
         </plugins>
     </build>
+
 </project>
