@@ -7,17 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
-        <module name="ms-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ms-gateway" target="17" />
       <module name="ms-student-service" target="1.8" />
       <module name="ms-user-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="config-server" options="" />
+      <module name="config-server" options="-parameters" />
       <module name="ms-gateway" options="-parameters" />
       <module name="ms-student-service" options="" />
       <module name="ms-user-service" options="" />
