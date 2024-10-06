@@ -1,15 +1,9 @@
 spring:
-  config:
-    import: "optional:configserver:http://localhost:8888"
-
   application:
-    name: ms-student-service  # Nombre del microservicio, debe coincidir con el nombre del archivo en config-repo
+    name: ms-student-service
   cloud:
     config:
       uri: http://localhost:8888  # URL del Config Server
       fail-fast: true  # Indica que falle rápidamente si no se puede conectar al Config Server
-    consul:
-      host: localhost
-      port: 8500
-    discovery:
-      service-name: ms-student-service
+  config:
+    import: "configserver:"  # Esta línea define el uso del servidor de configuración

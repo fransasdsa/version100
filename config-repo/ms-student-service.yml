@@ -1,10 +1,11 @@
-server:
-  port: 8082  # Puerto del servicio ms-student-service
 spring:
   r2dbc:
     url: r2dbc:postgresql://localhost:5432/studentdb
     username: postgres
     password: 123456
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
   cloud:
     config:
       uri: http://localhost:8888

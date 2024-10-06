@@ -57,7 +57,16 @@
             <version>0.8.13.RELEASE</version> <!-- Agrega la versión aquí -->
         </dependency>
 
+        <dependency>
+            <groupId>io.r2dbc</groupId>
+            <artifactId>r2dbc-pool</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
         <!-- Actuator para monitoreo -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
