@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ms-student-service  # Nombre del microservicio, debe coincidir con el nombre del archivo en config-repo
+  cloud:
+    config:
+      uri: http://localhost:8888  # URL del Config Server
+      fail-fast: true  # Indica que falle rápidamente si no se puede conectar al Config Server
+    consul:
+      host: localhost
+      port: 8500
+    discovery:
+      service-name: ms-student-service
