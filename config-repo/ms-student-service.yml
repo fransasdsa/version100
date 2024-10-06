@@ -1,6 +1,5 @@
 server:
-  port: 8082  # Puerto para el microservicio ms-student-service
-
+  port: 8082  # Puerto del servicio ms-student-service
 spring:
   r2dbc:
     url: r2dbc:postgresql://localhost:5432/studentdb

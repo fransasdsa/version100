@@ -53,6 +53,7 @@
         <dependency>
             <groupId>io.r2dbc</groupId>
             <artifactId>r2dbc-postgresql</artifactId>
+            <version>0.8.13.RELEASE</version> <!-- Asegúrate de especificar la versión correcta -->
         </dependency>
 
         <!-- Actuator para monitoreo -->
