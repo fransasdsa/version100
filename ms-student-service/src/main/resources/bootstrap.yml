@@ -1,4 +1,7 @@
 spring:
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
   application:
     name: ms-student-service  # Nombre del microservicio, debe coincidir con el nombre del archivo en config-repo
   cloud:

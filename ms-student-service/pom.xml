@@ -21,9 +21,9 @@
 
     <properties>
         <java.version>17</java.version>
-        <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <spring-cloud.version>2022.0.3</spring-cloud.version>
+        <spring-boot.version>3.0.7</spring-boot.version>
     </properties>
-
     <dependencies>
         <!-- Spring Boot Starter para aplicaciones reactivas (WebFlux) -->
         <dependency>
@@ -50,11 +50,13 @@
         </dependency>
 
         <!-- Driver R2DBC para PostgreSQL -->
+        <!-- Driver R2DBC para PostgreSQL -->
         <dependency>
             <groupId>io.r2dbc</groupId>
             <artifactId>r2dbc-postgresql</artifactId>
-            <version>0.8.13.RELEASE</version> <!-- Asegúrate de especificar la versión correcta -->
+            <version>0.8.13.RELEASE</version> <!-- Agrega la versión aquí -->
         </dependency>
+
 
         <!-- Actuator para monitoreo -->
         <dependency>
