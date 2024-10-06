@@ -2,24 +2,13 @@ server:
   port: 8081  # Puerto para el microservicio ms-auth-service
 
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/authdb  # Base de datos específica para este microservicio
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/authdb
     username: postgres
     password: 123456
-    driver-class-name: org.postgresql.Driver  # Driver para PostgreSQL
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true  # Mostrar las consultas SQL ejecutadas
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect  # Dialecto específico para PostgreSQL
-
   cloud:
     config:
-      uri: http://localhost:8888  # Dirección del Config Server
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/  # Dirección del Eureka Server
+      uri: http://localhost:8888
+    consul:
+      discovery:
+        service-name: ms-auth-service

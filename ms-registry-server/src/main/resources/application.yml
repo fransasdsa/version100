@@ -1,0 +1,12 @@
+server:
+  port: 8500  # Puerto para el servidor Consul
+
+spring:
+  application:
+    name: ms-registry-server
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    discovery:
+      service-name: ms-registry-server

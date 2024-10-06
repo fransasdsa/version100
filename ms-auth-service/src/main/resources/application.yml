@@ -1,9 +1,1 @@
-spring:
-  application:
-    name: ms-auth-service  # Nombre del microservicio cliente
-  cloud:
-    config:
-      uri: http://localhost:8888  # URL del Config Server
-      fail-fast: true  # Falla rápidamente si no se puede conectar al Config Server
-  config:
-    import: optional:configserver:http://root:123456@localhost:7070
+spring.application.name=ms-auth-service
